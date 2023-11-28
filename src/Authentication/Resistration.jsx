@@ -1,13 +1,14 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import { imgbbupload } from "../Function Utilises/Utilites";
 import useAuth from "../Hook/useAuth";
-import axios from "axios";
+import { TbFidgetSpinner } from "react-icons/tb";
 import { axiospublic } from "../Hook/useAxios";
 
 const Resistration = () => {
-    const { signUp, update } = useAuth()
+    const { signUp, update, loading } = useAuth()
+    const navigate = useNavigate()
     const {
         register,
         handleSubmit,
@@ -21,6 +22,7 @@ const Resistration = () => {
         const image = data.image[0]
         const bank = data.bank
         const role = data.role
+        const verify = 'false'
         const designation = data.designation
         const salary = data.salary
         console.log(email, password)
@@ -29,12 +31,13 @@ const Resistration = () => {
             const upload = await imgbbupload(image)
             console.log(upload)
             const userimg = upload.data?.display_url
-            const userinfo = { name, email, bank, role, designation, salary, userimg }
+            const userinfo = { name, email, bank, role, designation, salary, userimg, verify }
             await signUp(email, password)
             await update(data.name, upload.data?.display_url)
             const res = await axiospublic.post('/users', userinfo)
             console.log(res.data)
             toast.success("success login")
+            navigate('/')
         }
         catch (err) {
             toast.error(err.message)
@@ -82,7 +85,7 @@ const Resistration = () => {
                                     <option disabled selected>Please Enter Your Role?</option>
                                     <option value="Employee">Employee</option>
                                     <option value="HR">HR</option>
-                                    <option value="Admim">Admin</option>
+                                    <option value="Admin">Admin</option>
                                 </select>
 
                                 {
@@ -219,10 +222,10 @@ const Resistration = () => {
                             type='submit'
                             className='bg-rose-500 w-full rounded-md py-3 text-white'
                         >
-                            {/* {
-                                loading ? <TbFidgetSpinner className=' animate-spin mx-auto' /> : 'Continue'
-                            } */}
-                            SUBMIT
+                            {
+                                loading ? <TbFidgetSpinner className=' animate-spin mx-auto' /> : 'SUBMIT'
+                            }
+
                         </button>
                     </div>
                 </form>

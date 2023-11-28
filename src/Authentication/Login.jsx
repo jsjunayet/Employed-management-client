@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import img from "../../src/assets/Login.jpg";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
@@ -6,6 +6,8 @@ import useAuth from "../Hook/useAuth";
 
 const Login = () => {
     const { login } = useAuth()
+    const navigate = useNavigate()
+    const location = useLocation()
     const {
         register,
         handleSubmit,
@@ -20,6 +22,7 @@ const Login = () => {
             login(email, password)
                 .then(result => {
                     console.log(result.user)
+                    navigate(location?.state ? location.state : '/')
                 })
                 .catch(error => {
                     toast.error(error.message)

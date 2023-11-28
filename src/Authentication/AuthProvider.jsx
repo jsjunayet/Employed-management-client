@@ -1,6 +1,8 @@
 import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut, updateProfile } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import { auth } from "../../public/firebase.config";
+import { axiospublic } from "../Hook/useAxios";
+import UseaxiosPublic from "../Hook/UseaxiosPublic";
 
 
 
@@ -8,6 +10,7 @@ import { auth } from "../../public/firebase.config";
 export const AuthControl = createContext(null)
 const AuthProvider = ({ children }) => {
     // const axiosPublic = UseaxiosPublic()
+    const axiosJust = UseaxiosPublic()
     const [user, setuser] = useState(null)
     const [loading, setloading] = useState(true)
     const signUp = (email, password) => {
@@ -29,19 +32,19 @@ const AuthProvider = ({ children }) => {
     useEffect(() => {
         const unsubsribe = onAuthStateChanged(auth, currentUser => {
             setuser(currentUser)
-            // if (currentUser) {
-            //     const userinfo = { email: currentUser?.email }
-            //     axiosPublic.post('/jwt', userinfo)
-            //         .then(res => {
-            //             console.log(res.data)
-            //             if (res.data) {
-            //                 localStorage.setItem('access-token', res.data)
-            //             }
-            //         })
-            // }
-            // else {
-            //     localStorage.removeItem('access-token')
-            // }
+            if (currentUser) {
+                const userinfo = { email: currentUser?.email }
+                axiosJust.post('/jwt', userinfo)
+                    .then(res => {
+                        console.log(res.data)
+                        if (res.data) {
+                            localStorage.setItem('access-token', res.data)
+                        }
+                    })
+            }
+            else {
+                localStorage.removeItem('access-token')
+            }
             setloading(false)
         })
         return () => {
