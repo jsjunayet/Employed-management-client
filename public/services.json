@@ -1,0 +1,82 @@
+[
+    {
+        "title": "Personnel Tracking",
+        "description": "Efficient and real-time monitoring of your workforce. Keep track of attendance, leave, and performance metrics.",
+        "features": [
+            "Real-time attendance tracking",
+            "Leave management system",
+            "Performance metric analysis"
+        ],
+        "image": "https://i.ibb.co/DGkf13k/online-ordering-taxi-car-rent-sharing-using-service-mobile-application-70921-680.jpg"
+    },
+    {
+        "title": "Collaborative Projects",
+        "description": "Streamlined tools for seamless team collaboration. From ideation to execution, foster creativity and innovation.",
+        "features": [
+            "Project ideation and planning",
+            "Task assignment and tracking",
+            "Document collaboration"
+        ],
+        "image": "https://i.ibb.co/CJKpnTJ/businessman-shaking-hand-with-his-colleague-office.jpg"
+    },
+    {
+        "title": "HR Optimization",
+        "description": "Future-ready HR solutions for enhanced efficiency. Automate routine tasks and focus on strategic HR initiatives.",
+        "features": [
+            "Automated HR processes",
+            "Strategic HR planning tools",
+            "Employee lifecycle management"
+        ],
+        "image": "https://i.ibb.co/7Q0hJmM/3484570-1.jpg"
+    },
+    {
+        "title": "Task Management",
+        "description": "Organize and prioritize tasks with our intuitive management system. Increase productivity with clear goals and timelines.",
+        "features": [
+            "Task organization and prioritization",
+            "Deadline management",
+            "Team collaboration on tasks"
+        ],
+        "image": "https://i.ibb.co/wsMLG64/4584-1.jpg"
+    },
+    {
+        "title": "Employee Engagement",
+        "description": "Boost morale and productivity with engagement-focused features. Employee surveys, recognition, and feedback mechanisms.",
+        "features": [
+            "Employee surveys and feedback",
+            "Recognition and rewards program",
+            "Communication channels"
+        ],
+        "image": "https://i.ibb.co/jVdfSjx/elevated-view-businessman-businesswoman-stacking-each-other-s-hand-project.jpg"
+    },
+    {
+        "title": "Performance Analytics",
+        "description": "Data-driven insights for informed decision-making. Measure individual and team performance to drive continuous improvement.",
+        "features": [
+            "Individual and team performance metrics",
+            "Data analytics tools",
+            "Continuous improvement strategies"
+        ],
+        "image": "https://i.ibb.co/M22k0J6/top-view-workmates-talking-about-bar-chart.jpg"
+    },
+    {
+        "title": "Training and Development",
+        "description": "Facilitate employee growth with tailored training programs. Track progress and enhance skills for career advancement.",
+        "features": [
+            "Customized training modules",
+            "Skill development tracking",
+            "Certification programs"
+        ],
+        "image": "https://i.ibb.co/sPcqQ92/meeting-presentation-planning-graphic-word.jpg"
+    },
+    {
+        "title": "Recruitment and Onboarding",
+        "description": "Simplify the hiring process and streamline onboarding. Efficiently manage candidate profiles and ensure a smooth transition for new hires.",
+        "features": [
+            "Applicant tracking system",
+            "Onboarding automation",
+            "New hire documentation"
+        ],
+        "image": "https://i.ibb.co/BCrGcz5/pexels-cottonbro-studio-5989933.jpg"
+    }
+]

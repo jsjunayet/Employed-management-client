@@ -1,3 +1,4 @@
+import Accordition from "./Accordition";
 import Bannar from "./Bannar";
 import Review from "./Review";
 import Section1 from "./Section1";
@@ -11,6 +12,7 @@ const Home = () => {
             <Services></Services>
             <Section1></Section1>
             <Review></Review>
+            <Accordition></Accordition>
         </div>
     );
 };
