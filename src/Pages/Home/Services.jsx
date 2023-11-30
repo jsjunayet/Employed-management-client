@@ -1,5 +1,3 @@
-// src/components/Services.js
-
 
 
 const Services = () => {
@@ -32,7 +30,7 @@ const Services = () => {
                 'Strategic HR planning tools',
                 'Employee lifecycle management',
             ],
-            image: 'hr-optimization.jpg', // Add your image file name or URL
+            image: 'https://i.ibb.co/7Q0hJmM/3484570-1.jpg',
         },
         {
             title: 'Task Management',
@@ -42,7 +40,7 @@ const Services = () => {
                 'Deadline management',
                 'Team collaboration on tasks',
             ],
-            image: 'task-management.jpg', // Add your image file name or URL
+            image: 'https://i.ibb.co/wsMLG64/4584-1.jpg',
         },
         {
             title: 'Employee Engagement',
@@ -52,7 +50,7 @@ const Services = () => {
                 'Recognition and rewards program',
                 'Communication channels',
             ],
-            image: 'employee-engagement.jpg', // Add your image file name or URL
+            image: 'https://i.ibb.co/jVdfSjx/elevated-view-businessman-businesswoman-stacking-each-other-s-hand-project.jpg',
         },
         {
             title: 'Performance Analytics',
@@ -62,7 +60,7 @@ const Services = () => {
                 'Data analytics tools',
                 'Continuous improvement strategies',
             ],
-            image: 'performance-analytics.jpg', // Add your image file name or URL
+            image: 'https://i.ibb.co/M22k0J6/top-view-workmates-talking-about-bar-chart.jpg',
         },
         {
             title: 'Training and Development',
@@ -72,7 +70,7 @@ const Services = () => {
                 'Skill development tracking',
                 'Certification programs',
             ],
-            image: 'training-and-development.jpg', // Add your image file name or URL
+            image: 'https://i.ibb.co/sPcqQ92/meeting-presentation-planning-graphic-word.jpg',
         },
         {
             title: 'Recruitment and Onboarding',
@@ -82,31 +80,35 @@ const Services = () => {
                 'Onboarding automation',
                 'New hire documentation',
             ],
-            image: 'recruitment-and-onboarding.jpg', // Add your image file name or URL
+            image: 'https://i.ibb.co/BCrGcz5/pexels-cottonbro-studio-5989933.jpg',
         },
 
     ];
 
     return (
-        <div className="max-w-7xl mx-auto my-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => (
-                <div key={index} className="bg-white shadow-md rounded-md overflow-hidden">
-                    <img
-                        src={service.image}
-                        alt={service.title}
-                        className="w-full h-40 object-cover object-center"
-                    />
-                    <div className="p-4">
-                        <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-                        <p className="text-gray-600 mb-4">{service.description}</p>
-                        <ul className="list-disc pl-6">
-                            {service.features.map((feature, i) => (
-                                <li key={i} className="text-gray-600">{feature}</li>
-                            ))}
-                        </ul>
+        <div>
+            <p className="text-center text-3xl font-semibold text-inherit mt-5">A Symphony of Innovative Services</p>
+            <div className="max-w-7xl mx-auto my-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                {services.map((service, index) => (
+                    <div key={index} className="bg-white shadow-md hover:shadow-lg rounded-md overflow-hidden">
+                        <img
+                            src={service.image}
+                            alt={service.title}
+                            className="w-full h-40 object-cover object-center"
+                        />
+                        <div className="p-4">
+                            <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
+                            <p className="text-gray-600 mb-4">{service.description}</p>
+                            <ul className="list-disc pl-6">
+                                {service.features.map((feature, i) => (
+                                    <li key={i} className="text-gray-600">{feature}</li>
+                                ))}
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            ))}
+
+                ))}
+            </div>
         </div>
     );
 };
