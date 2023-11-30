@@ -8,6 +8,7 @@ import Employee from './Employee/Employee';
 import { useRole } from '../../Hook/Utilises';
 import toast from 'react-hot-toast';
 import { useState } from 'react';
+import img1 from '../../../src/assets/monday-logo-x2 (1).png'
 
 
 const Sliderber = () => {
@@ -51,7 +52,7 @@ const Sliderber = () => {
                 <div>
                     <div>
                         <div className='w-full hidden md:flex px-4 py-2 shadow-lg rounded-lg justify-center items-center bg-rose-100 mx-auto'>
-
+                            <img src={img1} alt="" />
                         </div>
                     </div>
 

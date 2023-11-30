@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const axiospublic = axios.create({
-    baseURL: 'http://localhost:5000/',
+    baseURL: 'https://assignment-12-server-wine-phi.vercel.app',
 
 })
 const useAxios = () => {

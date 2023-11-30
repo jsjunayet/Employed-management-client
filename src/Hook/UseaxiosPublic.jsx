@@ -2,7 +2,7 @@ import axios from "axios";
 
 
 export const axiospvt = axios.create({
-    baseURL: 'http://localhost:5000/'
+    baseURL: 'https://assignment-12-server-wine-phi.vercel.app'
 })
 const UseaxiosPublic = () => {
     // axiospvt.interceptors.request.use(function (config) {

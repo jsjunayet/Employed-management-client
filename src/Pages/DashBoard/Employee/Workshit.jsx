@@ -1,5 +1,5 @@
 
-import { split } from 'postcss/lib/list';
+
 import { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
@@ -42,6 +42,7 @@ const Workshit = () => {
         const name = user?.displayName
         const Worksheet = { Task, Hours, Date, name, email }
         const res = await axiospublic.post('/works', Worksheet)
+        refetch()
         if (res.data.insertedId) {
             toast.success("Successfully Add the task")
         }

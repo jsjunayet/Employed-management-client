@@ -1,9 +1,14 @@
+import Bannar from "./Bannar";
+import Review from "./Review";
+import Section1 from "./Section1";
 
 
 const Home = () => {
     return (
         <div>
-            <h1>this is Home page</h1>
+            <Bannar></Bannar>
+            <Section1></Section1>
+            <Review></Review>
         </div>
     );
 };

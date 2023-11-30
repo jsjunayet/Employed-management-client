@@ -1,7 +1,7 @@
 
 import { Link } from 'react-router-dom';
 import MenuItem from '../../Component/ShareComponnet/MenuItem';
-import img1 from '../../assets/logo.png'
+import img1 from '../../assets/monday-logo-x2 (1).png'
 import useAuth from '../../Hook/useAuth';
 import img from '../../assets/profile.png'
 import toast from 'react-hot-toast';
@@ -18,7 +18,7 @@ const Navbar = ({ Children }) => {
             <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content  w-full bg-white z-10 shadow-md opacity-100 flex flex-col border-b-[1px]">
                 {/* Navbar */}
-                <div className="navbar  max-w-7xl mx-auto">
+                <div className="navbar  w-full">
                     <div className="flex-none lg:hidden">
                         <label htmlFor="my-drawer-3" aria-label="open sidebar" className="btn btn-square btn-ghost">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-6 h-6 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
@@ -26,8 +26,9 @@ const Navbar = ({ Children }) => {
                     </div>
                     <div className="flex-1 px-2 mx-2">
                         <div>
-                            <p className="text-3xl text-bold uppercase  ">BISTRO BOSS</p>
-                            <p className="tracking-[.55em] uppercase ">Restaurant</p>
+                            {/* <p className="text-3xl text-bold uppercase  ">BISTRO BOSS</p>
+                            <p className="tracking-[.55em] uppercase ">Restaurant</p> */}
+                            <img src={img1} alt="" />
                         </div>
                     </div>
                     <div className="flex-none hidden lg:block">

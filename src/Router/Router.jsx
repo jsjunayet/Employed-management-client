@@ -56,7 +56,7 @@ const Router = createBrowserRouter([
                 {
                     path: 'employeelist/details/:id',
                     element: <Private><RouteHR><DetailsPage></DetailsPage></RouteHR></Private>,
-                    loader: ({ params }) => fetch(`http://localhost:5000/employeelist/details/${params.id}`)
+                    loader: ({ params }) => fetch(`https://assignment-12-server-wine-phi.vercel.app/employeelist/details/${params.id}`)
 
 
                 },
