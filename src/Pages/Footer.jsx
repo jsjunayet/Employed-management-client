@@ -3,15 +3,15 @@ const Footer = () => {
     return (
 
         <footer className="  text-neutral-content">
-            <div className="flex">
-                <aside className="bg-[#1F2937] space-y-2 py-10 w-1/2 flex flex-col items-center">
+            <div className="md:flex">
+                <aside className="bg-[#1F2937] space-y-2 py-10 md:w-1/2 w-full flex flex-col items-center">
                     <p className="text-2xl">CONTACT US</p>
                     <p>123 ABS Street, Uni 21, Bangladesh</p>
                     <p>+88 123456789</p>
                     <p>+88 123456789</p>
                     <p> Sat - Sun: 10:00 - 23:00</p>
                 </aside>
-                <nav className="bg-[#111827] py-10 w-1/2 text-center space-y-3" >
+                <nav className="bg-[#111827] py-10 md:w-1/2 w-full text-center space-y-3" >
                     <p className="text-2xl">Follow US</p>
                     <p>Join us on social media</p>
 

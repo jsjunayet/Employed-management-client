@@ -19,6 +19,12 @@ const Review = () => {
 
     return (
         <div className='max-w-7xl mx-auto'>
+            <div className="max-w-md mx-auto my-8 p-6 bg-white shadow-md rounded-md">
+                <h2 className="text-2xl font-semibold mb-4">Tech-Driven Employee Mastery</h2>
+                <p className="text-gray-600 mb-4">
+                    Elevate your workforce management with [Your Website Name]. Seamlessly integrating advanced technology, its the catalyst for efficient personnel tracking, collaborative projects, and a future-ready HR experience.
+                </p>
+            </div>
             <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
                 <div>
                     {
