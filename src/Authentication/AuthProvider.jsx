@@ -2,15 +2,11 @@ import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndP
 import { createContext, useEffect, useState } from "react";
 import { auth } from "../../public/firebase.config";
 import { axiospublic } from "../Hook/useAxios";
-import UseaxiosPublic from "../Hook/UseaxiosPublic";
-
-
 
 
 export const AuthControl = createContext(null)
 const AuthProvider = ({ children }) => {
     // const axiosPublic = UseaxiosPublic()
-    const axiosJust = UseaxiosPublic()
     const [user, setuser] = useState(null)
     const [loading, setloading] = useState(true)
     const signUp = (email, password) => {
@@ -34,7 +30,7 @@ const AuthProvider = ({ children }) => {
             setuser(currentUser)
             if (currentUser) {
                 const userinfo = { email: currentUser?.email }
-                axiosJust.post('/jwt', userinfo)
+                axiospublic.post('/jwt', userinfo)
                     .then(res => {
                         console.log(res.data)
                         if (res.data) {

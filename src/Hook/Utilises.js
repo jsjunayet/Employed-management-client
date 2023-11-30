@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query"
 import useAuth from "./useAuth"
 import { axiospublic } from "./useAxios"
+import { axiospvt } from "./UseaxiosPublic"
 
 export const useRole=()=>{
     const { user, loading } = useAuth()
@@ -9,7 +10,7 @@ export const useRole=()=>{
         enabled: !loading && !!user?.email,
         queryKey: ['role'],
         queryFn: async () => {
-            const res = await axiospublic.get(`/users/${email}`)
+            const res = await axiospvt.get(`/users/${email}`)
             return res.data.role
         }
     })
@@ -19,7 +20,7 @@ export const Usercollection = ()=>{
     const {data: User=[],refetch}= useQuery({
         queryKey:['users'],
         queryFn: async ()=> {
-            const res = await axiospublic.get('/users')
+            const res = await axiospvt.get('/users')
             return res.data
         }
     })
@@ -58,4 +59,16 @@ export const WorkSheet = ()=>{
         }
     })
     return[Works,refetch]
+}
+export const SingleWorkSheet = ()=>{
+    const {user}= useAuth()
+    const email = user?.email
+    const {data: SingleWork=[],refetch}= useQuery({
+        queryKey:['users'],
+        queryFn: async ()=> {
+            const res = await axiospublic.get(`/worksheet/${email}`)
+            return res.data
+        }
+    })
+    return[SingleWork,refetch]
 }

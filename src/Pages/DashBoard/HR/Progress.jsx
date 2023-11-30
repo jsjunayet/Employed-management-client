@@ -8,7 +8,6 @@ const Progress = () => {
         <div>
             <div>
                 <div>
-                    <h1 className="text-3xl font-bold text-center">Payment History</h1>
                     <div className='container mx-auto px-4 sm:px-8'>
                         <div className='py-8'>
                             <div className='-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto'>

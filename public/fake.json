@@ -1,0 +1,73 @@
+[
+    {
+              "name": "John Doe",
+              "position": "Software Engineer",
+              "photo": "https://i.ibb.co/my3k1RZ/dark-blonde-bearded-man-crosses-his-hands-chest-posing-black-shirt.jpg",
+               "text": "Working at [Your Company Name] has been an incredible journey. The collaborative environment and cutting-edge projects have allowed me to grow both professionally and personally. I feel proud to be part of such an innovative team."
+      },
+      {
+          "name": "Jeni Smithy",
+          "position": "Marketing Specialist",
+          "photo": "https://i.ibb.co/b67qXh5/portrait-smiling-blonde-businesswoman-formal-dressed-isolated-dark-textured-background.jpg",
+         "text": "The support and mentorship I've received at [Your Company Name] have been instrumental in my career development. The company's commitment to employee growth is evident in every aspect of our work culture. I am truly grateful to be a part of this team."
+      },
+      {
+        
+          "name": "Alex Johnson",
+          "position": "Sales Representative",
+          "photo": "https://i.ibb.co/d2b8KkJ/business-man-handsome-young-brunette-guy-grey-office-suit-tie-keeping-hands-pocket.jpg",
+           "text": "Working in sales can be challenging, but the collaborative spirit at [Your Company Name] makes it an enjoyable experience. The leadership team is invested in our success, and the camaraderie among colleagues is something special. Proud to be a part of this winning team!"
+      },
+      {
+          "name": "Emily Davis",
+          "position": "Human Resources Manager",
+          "photo": "https://i.ibb.co/6P9PzFQ/business-woman-red-jacket-isolated-office.jpg",
+          "text": "As the HR Manager at [Your Company Name], I have witnessed firsthand the commitment to employee well-being. The emphasis on work-life balance and professional development makes this company an ideal place to work. I am proud to contribute to our positive workplace culture."
+      },
+      {
+          "name": "Michael Chang",
+          "position": "Product Manager",
+          "photo": "https://i.ibb.co/Rc6fBZG/businessman-with-crossed-arms.jpg",
+         "text": "Innovation is at the core of [Your Company Name]'s culture. As a Product Manager, I appreciate the freedom to explore creative solutions and the continuous support from the leadership team. It's inspiring to be part of a company that values forward-thinking approaches."
+      }
+      
+    ]
+
+    [
+      {
+        "Name": "Software Engineer",
+        "Job Type": "Full-time",
+        "Salary": "$900 - $1200",
+        "Location": "San Francisco, CA",
+        "Apply": "https://jobly.kodeforest.com/wp-content/uploads/2019/04/03.png"
+      },
+      {
+        "Name": "Software Engineer",
+        "Job Type": "Full-time",
+        "Salary": "$800 - $1200",
+        "Location": "San Francisco, CA",
+        "Apply": "https://jobly.kodeforest.com/wp-content/uploads/2019/04/02.png"
+      },
+      {
+        "Name": "Font-end Development",
+        "Job Type": "Part-time",
+        "Salary": "$500 - $700",
+        "Location": "New York, NY",
+        "Apply": "https://jobly.kodeforest.com/wp-content/uploads/2019/04/07.png"
+      },
+      {
+        "Name": "Data Scientist",
+        "Job Type": "Full-time",
+        "Salary": "$1000 - $1300",
+        "Location": "Seattle, WA",
+        "Apply": "https://jobly.kodeforest.com/wp-content/uploads/2019/04/08.png"
+      }
+      {
+        "Name": "Back-end development",
+        "Job Type": "Part-time",
+        "Salary": "$1000 - $1300",
+        "Location": "Seattle, WA",
+        "Apply": "https://jobly.kodeforest.com/wp-content/uploads/2019/04/10.png"
+      }
+    ]
+     

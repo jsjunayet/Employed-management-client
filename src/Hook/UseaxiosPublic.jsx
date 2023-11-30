@@ -1,11 +1,19 @@
 import axios from "axios";
 
 
-const axiosJust = axios.create({
+export const axiospvt = axios.create({
     baseURL: 'http://localhost:5000/'
 })
 const UseaxiosPublic = () => {
-    return axiosJust
+    // axiospvt.interceptors.request.use(function (config) {
+    //     const token = localStorage.getItem('access-token')
+    //     config.headers.Authorization = `Bearer ${token}`
+    //     return config
+    // }, function (error) {
+    //     // Do something with request error
+    //     return Promise.reject(error);
+    // });
+    return axiospvt
 
 };
 
