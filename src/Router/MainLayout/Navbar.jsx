@@ -68,7 +68,7 @@ const Navbar = ({ Children }) => {
                     {/* Sidebar content here */}
                     <MenuItem address='/' label='Home'></MenuItem>
                     <MenuItem address='dashboard' label={'DashBoard'} ></MenuItem>
-                    <MenuItem address='contact' label="Contact"></MenuItem>
+                    <MenuItem address='contact' label="Contact us"></MenuItem>
                     <div className="dropdown dropdown-end">
                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                             <div className="w-10 rounded-full">
