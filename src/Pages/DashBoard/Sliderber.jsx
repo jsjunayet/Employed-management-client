@@ -14,10 +14,6 @@ import img1 from '../../../src/assets/monday-logo-x2 (1).png'
 const Sliderber = () => {
     const { logOut } = useAuth()
     const [isActive, setActive] = useState(false)
-    // const [toggle, setToggle] = useState(false)
-    // const toggleHandler = event => {
-    //     setToggle(event.target.checked)
-    // }
     const handleToggle = () => {
         setActive(!isActive)
     }
@@ -44,7 +40,6 @@ const Sliderber = () => {
                     <AiOutlineBars className='h-5 w-5' />
                 </button>
             </div>
-            {/* Sidebar */}
             <div
                 className={`z-10 md:fixed flex flex-col justify-between overflow-x-hidden bg-gray-100 w-64 space-y-6 px-2 py-4 absolute inset-y-0 left-0 transform ${isActive && '-translate-x-full'
                     }  md:translate-x-0  transition duration-200 ease-in-out`}
@@ -56,23 +51,17 @@ const Sliderber = () => {
                         </div>
                     </div>
 
-                    {/* Nav Items */}
                     <div className='flex flex-col justify-between flex-1 mt-6'>
-                        {/* If a user is host */}
-                        {/* <ToggleBtn toggleHandler={toggleHandler} /> */}
                         <nav>
                             {Role === "Admin" && <AdminMenus></AdminMenus>}
                             {Role === "HR" && <HRmenus></HRmenus>}
                             {Role === "Employee" && <Employee></Employee>}
-                            {/* Menu Items */}
                         </nav>
                     </div>
                 </div>
-
                 <div>
                     <hr />
-
-                    <button onClick={handleLogout} className='flex w-full items-center px-4 py-2 mt-5 text-gray-600 hover:bg-gray-300   hover:text-gray-700 transition-colors duration-300 transform'>
+                    <button onClick={handleLogout} className='flex  w-full items-center px-4 py-2 mt-5 text-gray-600 hover:bg-gray-300   hover:text-gray-700 transition-colors duration-300 transform'>
                         <GrLogout className='w-5 h-5' />
                         <span className='mx-4 font-medium'>Logout</span>
                     </button>
@@ -81,5 +70,4 @@ const Sliderber = () => {
         </>
     );
 };
-
 export default Sliderber;

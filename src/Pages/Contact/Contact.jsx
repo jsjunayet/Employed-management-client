@@ -29,7 +29,7 @@ const Contact = () => {
                     Feel free to reach out to us. Your opinions matter!
                 </p>
                 <p className="text-gray-600 mb-6">
-                    Company Address: 123 ABS Street, Uni 21, Bangladesh
+                    Company Address: 123 ABS Street, Dhaka, Bangladesh
                 </p>
                 <form onSubmit={handleSubmit}>
                     <div className="mb-4">
