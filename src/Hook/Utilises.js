@@ -2,6 +2,7 @@ import { useQuery } from "@tanstack/react-query"
 import useAuth from "./useAuth"
 import { axiospublic } from "./useAxios"
 import { axiospvt } from "./UseaxiosPublic"
+import axios from "axios"
 
 export const useRole=()=>{
     const { user, loading } = useAuth()
@@ -59,6 +60,16 @@ export const WorkSheet = ()=>{
         }
     })
     return[Works,refetch]
+}
+export const TotalWork = ()=>{
+    const {data: total={},refetch}= useQuery({
+        queryKey:['worksheets'],
+        queryFn: async ()=> {
+            const res = await axios.get('http://localhost:5000/worksheets')
+            return res.data
+        }
+    })
+    return{total,refetch}
 }
 export const SingleWorkSheet = ()=>{
     const {user}= useAuth()
