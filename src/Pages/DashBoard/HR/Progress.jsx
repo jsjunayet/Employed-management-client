@@ -7,38 +7,13 @@ import { MdOutlineSkipNext, MdOutlineSkipPrevious } from "react-icons/md";
 const Progress = () => {
     const [search, setsearch] = useState('')
     const [Range, setRange] = useState('')
-    const [Allwork, setAllwork] = ([])
-    const [currentpage, setcurrentpage] = useState(1)
-    const [itemperpage, setitemperpage] = useState(5)
     const [EmployeeName, setEmployeeName] = useState('')
     const [Works] = WorkSheet()
     const Names = [...new Set(Works.map(item => item.name))]
     const filters = Works.filter(Work => (search === "" || Work.name.toLowerCase().includes(search.toLowerCase())) &&
         (EmployeeName === "" || Work.name === EmployeeName) && (Work.Hours >= Range))
         .sort((a, b) => (b.Hours - a.Hours))
-    const { total } = TotalWork()
-    const Total = total.count
-    const cols = Math.ceil(Total / itemperpage)
-    const pages = []
-    for (let i = 1; i <= cols; i++) {
-        pages.push(i)
-    }
-    const handleprev = () => {
-        if (currentpage > 1) {
-            setcurrentpage(currentpage - 1)
-        }
-    }
-    const handlenext = () => {
-        if (currentpage < pages.length) {
-            setcurrentpage(currentpage + 1)
-        }
-    }
 
-    useEffect(() => {
-        fetch(`http://localhost:5000/pagination?page=${currentpage - 1}&size=${itemperpage}`)
-            .then(res => res.json())
-            .then(data => setAllwork(data))
-    }, [currentpage, itemperpage, setAllwork]);
     return (
         <div>
             <div>
@@ -146,13 +121,7 @@ const Progress = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='text-center mt-3 flex items-center justify-center' >
-                        <button onClick={handleprev}><MdOutlineSkipPrevious className='text-2xl text-blue-500'></MdOutlineSkipPrevious></button>
-                        {
-                            pages.map((page) => <button onClick={() => setcurrentpage(page)} className={`mx-2 btn ${currentpage === page ? 'bg-blue-500 text-white' : 'bg-white'}`} key={page}>{page}</button>)
-                        }
-                        <button onClick={handlenext}><MdOutlineSkipNext className='text-2xl text-blue-500'></MdOutlineSkipNext></button>
-                    </div>
+
                 </div>
             </div>
 

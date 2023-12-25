@@ -35,7 +35,7 @@ const Contact = () => {
                         <input
                             type="text"
                             id="email"
-                            name="user_name"
+                            name="to_name"
                             className="w-full px-3 py-2 border rounded-md"
                             placeholder="Your Name"
                             // value={email}
@@ -50,7 +50,7 @@ const Contact = () => {
                         <input
                             type="email"
                             id="email"
-                            name="user_email"
+                            name="from_name"
                             className="w-full px-3 py-2 border rounded-md"
                             placeholder="Your email"
                             // value={email}
@@ -67,6 +67,7 @@ const Contact = () => {
                             className="w-full px-3 py-2 border rounded-md"
                             placeholder="Your message"
                             rows="4"
+                            name="message"
                             // value={message}
                             // onChange={(e) => setMessage(e.target.value)}
                             required
